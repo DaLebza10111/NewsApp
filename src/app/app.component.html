@@ -11,10 +11,12 @@
     <img src="" alt="" class="avatar mat-elavation-z8">
     <h4>Let's start</h4>
     <mat-divider></mat-divider>
-    <button mat-button class="menu-button">
-      <mat-icon>event_note</mat-icon>
-      <span>SABC NEWS</span>
-    </button>
+    <ng-container *ngFor="let source of sources">
+      <button mat-button class="menu-button">
+        <mat-icon></mat-icon>
+        <span>{{source.name}}</span>
+      </button>
+    </ng-container>
   </mat-sidenav>
   <mat-sidenav-content class="content mat-elevation-z4">
     
